@@ -1,0 +1,380 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Vazirmatn", sans-serif;
+  font-size: 16px;
+  color: #1f2421;
+  background-color: #fcf7ee;
+}
+/* ======= BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devices (landscape phones, 576px and up) 
+
+==========*/
+/* Header */
+.navbar {
+  display: none;
+}
+.HH-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  width: calc(100% - 50px);
+  margin: 0 auto;
+}
+.hamburger-icon-container {
+  display: block;
+  cursor: pointer;
+}
+/* Landing Page/Introduction section */
+.introduction {
+  height: 400px;
+  position: relative;
+  background-image: linear-gradient(
+    rgba(252, 247, 238, 0.7),
+    rgba(244, 226, 133, 0.7)
+  );
+}
+.intro-img {
+  display: none;
+}
+.intro-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  padding: 0 30px;
+}
+.intro-content h3 {
+  color: #333734;
+  margin-top: 5px;
+}
+.intro-content p {
+  font-weight: 500;
+  margin: 10px 20px;
+}
+.HH-button {
+  background-color: #cc6d58;
+  border-bottom: 2px solid #bc4b51;
+  border-radius: 25px;
+  color: #fcf7ee;
+  padding: 10px 10px 7px 10px;
+  transition: 0.5s ease-in-out;
+  width: calc(100% - 100px);
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  max-width: 350px;
+}
+.HH-button:hover {
+  background-color: #bc4b51;
+}
+/* Services section */
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 0 30px;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+.service-content {
+  margin: 10px 0;
+}
+.service a {
+  text-decoration: none;
+}
+.btn-small {
+  font-size: 16px;
+  max-width: 30%;
+}
+/* Side menu */
+.side-menu-design {
+  background-color: #f4e285;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: 0.4s ease-in-out;
+}
+.side-menu-position {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 6;
+}
+.side-menu-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  align-items: center;
+}
+.side-menu-close-button {
+  width: 30px;
+}
+.show-menu {
+  opacity: 1;
+  transform: translateX(0%);
+}
+/* Footer */
+.newsletter-signup {
+  padding: 30px 10px;
+  display: block;
+}
+.copyright {
+  margin: 20px 0 0 0;
+}
+/* ====== BREAK POINTS
+
+Medium (md) devices (tablets, 768px and up) 
+
+======*/
+@media (min-width: 768px) {
+  /* Introduction */
+  .intro-content {
+    width: 500px;
+  }
+  .HH-overlay {
+    width: 70%;
+  }
+}
+/*====== BREAK POINTS
+
+Large (lg) devices (desktops, 992px and up) 
+
+==========*/
+@media (min-width: 992px) {
+  /* Header */
+  .HH-header-container {
+    display: block;
+    text-align: center;
+    margin: 20px auto;
+  }
+  .hamburger-icon-container {
+    display: none;
+  }
+  .navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    margin-top: 30px;
+  }
+  .navbar-left a,
+  .navbar-right a {
+    padding-right: 40px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #cc6d58;
+    transition: 0.5s ease-in-out;
+  }
+  .navbar-left a:hover,
+  .navbar-right a:hover {
+    color: #bc4b51;
+    font-weight: 700;
+  }
+  .logo-container a,
+  .navbar a {
+    text-decoration: none;
+  }
+  /* Service section */
+  .services-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+    margin-bottom: 20px;
+  }
+  /* Footer */
+  .newsletter-signup {
+    padding: 30px 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .HH-overlay {
+    width: 80%;
+  }
+}
+
+/* ======================= HH MODAL======================= */
+
+/* .modal-window {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+} */
+
+.HH-overlay {
+  /* position: absolute; */
+  padding: 18px;
+  border-radius: 4px;
+  border: 6px solid #f4a259;
+  box-shadow: 0 0 30px 0 rgb(81, 81, 81);
+  background-color: #fff;
+  z-index: 3;
+  /* width: 60%; */
+  height: auto;
+  min-width: 0;
+}
+.modal-position {
+  position: relative;
+  bottom: 0px;
+  right: 0px;
+}
+.close-reveal-modal {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  right: -15px;
+  top: -15px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  background-color: #3b4144;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 32px;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 15px 1px rgba(2, 2, 2, 0.75);
+}
+.HH-sign-up-content h4 {
+  color: #000;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.HH-sign-up-content {
+  font-size: 16px;
+  display: block;
+  line-height: 36px;
+  box-sizing: border-box;
+}
+.email-additional a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #cc6d58;
+  margin-right: 10px;
+}
+.your-email {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.your-email .button {
+  background-color: #cc6d58;
+  color: #fff;
+  padding: 5px 20px;
+  border-color: #bc4b51;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.your-email .button:hover,
+.button:active {
+  background-color: #bc4b51;
+  cursor: pointer;
+}
+.your-email input[type="email"] {
+  padding: 6px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  width: 100%;
+}
+.info-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+@media (min-width: 992px) and (min-width: 1200px) {
+}
+
+/* DROPDOWN MENU */
+.dropdown-menu {
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); /* creates a border */
+  border-radius: 8px;
+  display: none;
+  padding: 15px;
+  position: absolute; /* pops element up in the dom */
+  top: 100px; /* just visually aligned this */
+  width: 250px;
+  z-index: 5;
+  animation: dropdown 0.7s; /* add 'forwards' to prevent the dropdown box to jump back up IF the second translateY position IS NOT at 0% */
+  will-change: transform;
+}
+@keyframes dropdown {
+  from {
+    transform: translateY(-3%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.dropdown-menu::after {
+  position: absolute;
+  top: -10px;
+  left: 5%;
+  width: 0;
+  height: 0;
+  content: "";
+  border-bottom: 15px solid #fff;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+}
+.dropdown-menu#coaching {
+  left: 155px;
+}
+
+.dropdown-menu#services {
+  left: 280px;
+  /* min-width: 400px;  */
+}
+.dropdown-menu#contact {
+  left: 525px;
+  /* min-width: 400px; */
+}
+.dropdown-item-list {
+  margin: 0;
+  padding-left: 0;
+}
+.dropdown-item-list li {
+  list-style: none;
+}
+.dropdown-item-list li a,
+.dropdown-item-list li a:visited,
+.dropdown-item-list li a:focus {
+  color: #454545;
+  display: block;
+  padding: 10px; /* just a little padding on the top and bottom */
+  text-decoration: none;
+}
+
+.dropdown-item-list li a:hover {
+  background-color: rgba(244, 226, 133, 0.4);
+  color: #5b8e7d;
+}
+.show {
+  display: block;
+}
