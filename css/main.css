@@ -27,9 +27,8 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
   width: calc(100% - 50px);
-  margin: 0 auto;
+  margin: 20px auto;
 }
 .hamburger-icon-container {
   display: block;
@@ -161,16 +160,17 @@ Large (lg) devices (desktops, 992px and up)
   .HH-header-container {
     display: block;
     text-align: center;
-    margin: 20px auto;
+    /* margin: 20px auto; */
   }
   .hamburger-icon-container {
     display: none;
   }
   .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: baseline;
     margin-top: 30px;
+    padding-left: 40px;
   }
   .navbar-left a,
   .navbar-right a {
@@ -344,15 +344,15 @@ Large (lg) devices (desktops, 992px and up)
   border-right: 15px solid transparent;
 }
 .dropdown-menu#coaching {
-  left: 155px;
+  left: 66px;
 }
 
 .dropdown-menu#services {
-  left: 280px;
+  left: 190px;
   /* min-width: 400px;  */
 }
 .dropdown-menu#contact {
-  left: 525px;
+  left: 436px;
   /* min-width: 400px; */
 }
 .dropdown-item-list {
