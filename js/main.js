@@ -46,9 +46,11 @@ document.getElementById("contact").addEventListener("mouseleave", menuHide);
 // Side menu
 function sideMenuAppears() {
   document.getElementById("side-menu").classList.add("show-menu");
+  document.getElementById("side-menu-content").classList.add("show-menu");
 }
 function sideMenuDisappears() {
   document.getElementById("side-menu").classList.remove("show-menu");
+  document.getElementById("side-menu-content").classList.remove("show-menu");
 }
 document
   .getElementById("menu-trigger")

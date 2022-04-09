@@ -29,6 +29,9 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
   display: block;
   cursor: pointer;
 }
+.dropdowns {
+  position: relative;
+}
 /* Landing Page/Introduction section */
 .introduction {
   height: 400px;
@@ -99,7 +102,6 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
 .side-menu-design {
   background-color: hsla(50deg, 83%, 74%, 0.85);
   backdrop-filter: blur(10px);
-  opacity: 0;
 }
 .side-menu-position {
   position: absolute;
@@ -112,9 +114,9 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
   /* the height doesnt cover the whole page vw, wh or percentage? */
   height: 100%;
   z-index: 6;
+  opacity: 0;
   transform: translateX(-100%);
   /* there are no transition fading out */
-  transition: opacity 500ms ease-in-out 0s;
 }
 .side-menu-header {
   display: flex;
@@ -125,6 +127,11 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
 .side-menu-close-button {
   width: 30px;
   cursor: pointer;
+}
+.side-menu-content {
+  opacity: 0;
+  transform: translateX(-110%);
+  transition: all 500ms ease-in-out 0.5s;
 }
 .side-menu-content a {
   text-decoration: none;
@@ -158,6 +165,7 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
 .show-menu {
   opacity: 1;
   transform: translateX(0%);
+  transition: opacity 500ms ease-in-out 0s;
 }
 /* Footer */
 .newsletter-signup {
@@ -347,7 +355,7 @@ Large (lg) devices (desktops, 992px and up)
   display: none;
   padding: 15px;
   position: absolute; /* pops element up in the dom */
-  top: 100px; /* just visually aligned this */
+  top: 10px; /* just visually aligned this */
   width: 250px;
   z-index: 5;
   animation: dropdown 0.7s; /* add 'forwards' to prevent the dropdown box to jump back up IF the second translateY position IS NOT at 0% */
@@ -375,15 +383,15 @@ Large (lg) devices (desktops, 992px and up)
   border-right: 15px solid transparent;
 }
 .dropdown-menu#coaching {
-  left: 66px;
+  left: 41px;
 }
 
 .dropdown-menu#services {
-  left: 190px;
+  left: 166px;
   /* min-width: 400px;  */
 }
 .dropdown-menu#contact {
-  left: 436px;
+  left: 411px;
   /* min-width: 400px; */
 }
 .dropdown-item-list {
@@ -408,4 +416,5 @@ Large (lg) devices (desktops, 992px and up)
 }
 .show {
   display: block;
+  text-align: left;
 }
