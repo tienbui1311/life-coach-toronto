@@ -19,6 +19,11 @@ function menuHide() {
   document.getElementById("services").classList.remove("show");
   document.getElementById("contact").classList.remove("show");
 }
+function menuFourShow() {
+  document.getElementById("contact").classList.remove("show");
+  document.getElementById("coaching").classList.remove("show");
+  document.getElementById("services").classList.remove("show");
+}
 
 document
   .getElementById("coaching-btn")
@@ -31,6 +36,8 @@ document
 document
   .getElementById("contact-btn")
   .addEventListener("mouseover", menuThreeShow);
+
+document.getElementById("about-me").addEventListener("mouseover", menuFourShow);
 
 document.getElementById("coaching").addEventListener("mouseleave", menuHide);
 document.getElementById("services").addEventListener("mouseleave", menuHide);
