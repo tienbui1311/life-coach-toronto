@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -25,6 +26,19 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
   width: calc(100% - 50px);
   margin: 20px auto;
 }
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logo {
+  width: 80px;
+  height: 80px;
+}
+.tagline {
+  font-family: "Allura", cursive;
+  font-size: 24px;
+}
 .hamburger-icon-container {
   display: block;
   cursor: pointer;
@@ -50,7 +64,7 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
   flex-direction: column;
   align-items: center;
   position: absolute;
-  top: 35%;
+  top: 25%;
   padding: 0 30px;
 }
 .intro-content h3 {
@@ -81,7 +95,7 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
 .services-container {
   display: grid;
   grid-template-columns: 1fr;
-  margin: 0 30px;
+  margin: 0 30px 30px;
 }
 .service {
   display: flex;
@@ -182,6 +196,11 @@ Medium (md) devices (tablets, 768px and up)
 
 ======*/
 @media (min-width: 768px) {
+  /* Header */
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
   /* Introduction */
   .intro-content {
     width: 500px;
@@ -202,8 +221,14 @@ Large (lg) devices (desktops, 992px and up)
     text-align: center;
     /* margin: 20px auto; */
   }
+  .logo-container {
+    flex-direction: column;
+  }
   .hamburger-icon-container {
     display: none;
+  }
+  .tagline {
+    font-size: 36px;
   }
   .dropdowns {
     display: block;
