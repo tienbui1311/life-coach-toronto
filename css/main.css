@@ -31,6 +31,7 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
 }
 .dropdowns {
   position: relative;
+  display: none;
 }
 /* Landing Page/Introduction section */
 .introduction {
@@ -203,6 +204,9 @@ Large (lg) devices (desktops, 992px and up)
   }
   .hamburger-icon-container {
     display: none;
+  }
+  .dropdowns {
+    display: block;
   }
   .navbar {
     display: flex;
