@@ -32,8 +32,8 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
   align-items: center;
 }
 .logo {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
 }
 .tagline {
   font-family: "Allura", cursive;
@@ -198,8 +198,8 @@ Medium (md) devices (tablets, 768px and up)
 @media (min-width: 768px) {
   /* Header */
   .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
   /* Introduction */
   .intro-content {
@@ -224,11 +224,29 @@ Large (lg) devices (desktops, 992px and up)
   .logo-container {
     flex-direction: column;
   }
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
   .hamburger-icon-container {
     display: none;
   }
   .tagline {
     font-size: 36px;
+    width: 50%;
+    text-align: center;
+  }
+  .tagline::before,
+  .tagline::after {
+    background-color: #cc6d58;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    bottom: 0.1em;
+    position: relative;
+    vertical-align: baseline;
+    width: 20%;
+    margin: 0 15px;
   }
   .dropdowns {
     display: block;
