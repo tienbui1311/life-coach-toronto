@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
@@ -44,8 +45,10 @@
             <a class="navbar-left-link" href="#" id="contact-btn">Contact</a>
           </nav>
           <nav class="navbar-right">
-            <a class="navbar-left-link" href="#">Sign Up</a>
-            <a class="navbar-left-link" href="#">Sign In</a>
+            <a class="navbar-left-link signup-btn" href="#">Sign Up</a>
+            <a class="navbar-left-link signin-btn" href="#"
+              >Upcoming Appointments</a
+            >
           </nav>
         </section>
         <section class="navbar-right-mobile">
@@ -55,20 +58,20 @@
         </section>
         <!-- Dropdown Menu -->
         <div class="dropdowns">
-          <aside class="dropdown-menu" id="coaching">
+          <aside class="hh-dropdown-menu" id="coaching">
             <ul class="dropdown-item-list">
               <li><a href="#">Life Coaching</a></li>
               <li><a href="#">Health Coaching</a></li>
             </ul>
           </aside>
-          <aside class="dropdown-menu" id="services">
+          <aside class="hh-dropdown-menu" id="services">
             <ul class="dropdown-item-list">
               <li><a href="#">Nutrition Counseling</a></li>
               <li><a href="#">Relationship Coaching</a></li>
               <li><a href="#">Career Coaching</a></li>
             </ul>
           </aside>
-          <aside class="dropdown-menu" id="contact">
+          <aside class="hh-dropdown-menu" id="contact">
             <ul class="dropdown-item-list">
               <li><a href="#">Location</a></li>
               <li><a href="#">Feedback</a></li>
@@ -319,48 +322,118 @@
         </div>
       </aside>
     </main>
+    <!-- HH account signup/in Modal-->
+    <div class="signup-in" id="signup-in-modal">
+      <div class="signup-in-modal-content">
+        <span class="close-btn">&times;</span>
+        <div class="signup-in-modal-content-left">
+          <img src="/img/H&H logo-01.png" alt="" />
+        </div>
+        <div class="signup-in-modal-content-right">
+          <form
+            action="/"
+            method="GET"
+            class="signup-in-modal-form"
+            id="signup-in-modal-form"
+          >
+            <h1>
+              Get started with us today! Create your account by filling out the
+              information below.
+            </h1>
+            <div class="form-validation">
+              <input
+                type="text"
+                class="modal-input"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form-validation">
+              <input
+                type="email"
+                class="modal-input"
+                id="account-email"
+                name="email"
+                placeholder="Enter your email"
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form-validation">
+              <input
+                type="password"
+                class="modal-input"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+              <p>Error Message</p>
+            </div>
+            <div class="form-validation">
+              <input
+                type="password"
+                class="modal-input"
+                id="password-confirm"
+                name="password"
+                placeholder="Confirm your password"
+              />
+              <p>Error Message</p>
+            </div>
+            <input type="submit" class="modal-input-btn" value="Sign Up" />
+            <span class="modal-input-login"
+              >Already have an account? Login <a href="#">here</a></span
+            >
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- HH join email list Modal HTML -->
+    <aside id="email-signup" class="modal-window modal fade">
+      <div class="HH-overlay modal-position modal-dialog">
+        <div class="HH-sign-up-content">
+          <h4>Sign Up to Receive Expert Advice From Our Therapists</h4>
+          <div>
+            <form action="" method="" class="">
+              <div class="info-input">
+                <div class="your-email">
+                  <input
+                    type="email"
+                    name="your-email"
+                    value
+                    size="40"
+                    placeholder="Your Email"
+                  />
+
+                  <input type="submit" value="Subscribe" class="button" />
+                </div>
+                <p class="email-additional">
+                  <a href="" target="_blank">Privacy Policy</a>
+                  <a href="" target="_blank">Contact Us</a>
+                  <br />
+                  You may unsubscribe at any time by clicking on the provided
+                  link on any marketing message.
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <button
+          type="button"
+          class="close-reveal-modal"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        >
+          x
+        </button>
+      </div>
+    </aside>
     <footer>
       <hr class="socket" />
-      <div class="newsletter-signup">
-        <!-- HH Modal HTML -->
-        <aside class="modal-window">
-          <div id="HH-modal" class="HH-overlay modal-position">
-            <div class="HH-sign-up-content">
-              <h4>Sign Up to Receive Expert Advice From Our Therapists</h4>
-              <div>
-                <form action="" method="" class="">
-                  <div class="info-input">
-                    <div class="your-email">
-                      <input
-                        type="email"
-                        name="your-email"
-                        value
-                        size="40"
-                        placeholder="Your Email"
-                      />
-
-                      <input type="submit" value="Subscribe" class="button" />
-                    </div>
-                    <p class="email-additional">
-                      <a href="" target="_blank">Privacy Policy</a>
-                      <a href="" target="_blank">Contact Us</a>
-                      <br />
-                      You may unsubscribe at any time by clicking on the
-                      provided link on any marketing message.
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
-            <button type="button" class="close-reveal-modal" aria-label="Close">
-              x
-            </button>
-          </div>
-        </aside>
-        <p class="copyright">HealthyandHappy.ca 2022. All Right Reserved.</p>
-      </div>
+      <p class="copyright">HealthyandHappy.ca 2022. All Right Reserved.</p>
     </footer>
-
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

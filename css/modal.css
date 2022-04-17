@@ -1,0 +1,206 @@
+.signup-in {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.signup-in .signup-in-modal-content {
+  background-color: #f4f4f4;
+  margin: 10% auto;
+  width: 60%;
+  -webkit-box-shadow: 0 0 30px 0 #515151;
+          box-shadow: 0 0 30px 0 #515151;
+  position: relative;
+  border-radius: 5px;
+  min-height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+}
+
+.signup-in .signup-in-modal-content .close-btn {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: 3rem;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.signup-in .signup-in-modal-content .close-btn:hover {
+  color: #f00e0e;
+  -webkit-transition: 0.2s ease-out;
+  transition: 0.2s ease-out;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-left {
+  background: -webkit-gradient(linear, left top, right top, from(#f74a46), to(#ec2b00));
+  background: linear-gradient(90deg, #f74a46 0%, #ec2b00 100%);
+  border-radius: 0 5px 5px 0;
+  position: relative;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-left img {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right {
+  border-radius: 0 5px 5px 0;
+  position: relative;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form h1 {
+  font-size: 1rem;
+  text-align: start;
+  width: 80%;
+  margin-bottom: 1rem;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation {
+  margin-bottom: 0.5rem;
+  width: 80%;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation.error {
+  margin-bottom: 1.5rem;
+  position: relative;
+  border: 1px solid #f00e0e;
+  border-radius: 2px;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation.error p {
+  display: block;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation.valid {
+  margin-bottom: 0.5rem;
+  position: relative;
+  border: 1px solid #0add0a;
+  border-radius: 2px;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation p {
+  font-size: 0.7rem;
+  margin-top: 0.5rem;
+  color: #f00e0e;
+  display: none;
+  position: absolute;
+  top: 1.8rem;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation .modal-input {
+  display: block;
+  padding-left: 0.5rem;
+  outline: none;
+  border-radius: 2px;
+  border: none;
+  height: 2rem;
+  width: 100%;
+  -webkit-box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation .modal-input::-webkit-input-placeholder {
+  color: #b1b1b1;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation .modal-input:-ms-input-placeholder {
+  color: #b1b1b1;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation .modal-input::-ms-input-placeholder {
+  color: #b1b1b1;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .form-validation .modal-input::placeholder {
+  color: #b1b1b1;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .modal-input-btn {
+  width: 80%;
+  height: 2rem;
+  border-radius: 4px;
+  background-color: #f9423d;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  -webkit-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .modal-input-btn:hover {
+  background-color: #337af1;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .modal-input-login {
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  width: 80%;
+  color: #b1b1b1;
+  text-align: center;
+}
+
+.signup-in .signup-in-modal-content .signup-in-modal-content-right .signup-in-modal-form .modal-input-login a {
+  text-decoration: none;
+  color: #f9423d;
+  font-size: 600;
+}
+
+@media screen and (max-width: 768px) {
+  .signup-in-modal-content-left {
+    display: none;
+  }
+  .signup-in-modal-content {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    margin: 15% auto;
+    width: 70%;
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .signup-in-modal-content {
+    margin: 20% auto;
+    width: 90%;
+    height: 80%;
+  }
+}
+/*# sourceMappingURL=modal.css.map */

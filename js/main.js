@@ -58,4 +58,91 @@ document
 document
   .getElementById("menu-close")
   .addEventListener("click", sideMenuDisappears);
-// HH Modal
+// HH email signup Modal
+// Using Bootstrap css, js and jQuery to open modal on Page Load
+$(document).ready(function () {
+  $("#email-signup").modal("show");
+});
+
+// Sign up Modal
+const signUp = document.getElementById("signup-in-modal");
+const openSignUp = document.querySelector(".signup-btn");
+const closeSignup = document.querySelector(".close-btn");
+// Click events for Sign Up Modal
+openSignUp.addEventListener("click", () => {
+  signUp.style.display = "block";
+});
+closeSignup.addEventListener("click", () => {
+  signUp.style.display = "none";
+});
+window.addEventListener("click", (e) => {
+  if (e.target === signUp) {
+    signUp.style.display = "none";
+  }
+});
+//Form Validation
+const form = document.getElementById("signup-in-modal-form");
+const clientName = document.getElementById("name");
+const email = document.getElementById("account-email");
+const password = document.getElementById("password");
+const passwordConfirm = document.getElementById("password-confirm");
+//Show error message
+function showError(input, message) {
+  const formValidation = input.parentElement;
+  formValidation.className = "form-validation error";
+
+  const errorMessage = formValidation.querySelector("p");
+  errorMessage.innerText = message;
+}
+// Show Valid message
+function showValid(input) {
+  const formValidation = input.parentElement;
+  formValidation.className = "form-validation valid";
+}
+// Check Required fields
+function checkRequired(inputArr) {
+  inputArr.forEach((input) => {
+    if (input.value.trim() === "") {
+      showError(input, `${getFieldName(input)} is required`);
+    } else {
+      showValid(input);
+    }
+  });
+}
+// Check Passwords match
+function passwordMatch(input1, input2) {
+  if (input1.value !== input2.value) {
+    showError(input2, "Passwords do not match");
+  }
+}
+
+// Get Field's names
+function getFieldName(input) {
+  return input.name.charAt(0).toUpperCase() + input.name.slice(1);
+}
+// Check input length
+function checkLength(input, min, max) {
+  if (input.value.length < min) {
+    showError(
+      input,
+      `${getFieldName(input)} must be at least ${min} characters`
+    );
+  } else if (input.value.length > max) {
+    showError(
+      input,
+      `${getFieldName(input)} must be less than ${max} characters`
+    );
+  } else {
+    showValid(input);
+  }
+}
+// Event Listeners
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  checkRequired([clientName, email, password, passwordConfirm]);
+  checkLength(clientName, 2, 30);
+  checkLength(password, 8, 25);
+  checkLength(passwordConfirm, 8, 25);
+  passwordMatch(password, passwordConfirm);
+});

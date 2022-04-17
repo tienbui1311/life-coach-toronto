@@ -1,0 +1,162 @@
+$errorColor: #f00e0e;
+$validColor: #0add0a;
+$boxShadow: 0 0 30px 0 rgb(81, 81, 81);
+$placeholderText: #b1b1b1;
+
+.signup-in {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba($color: #000, $alpha: 0.5);
+  display: none;
+  .signup-in-modal-content {
+    background-color: #f4f4f4;
+    margin: 10% auto;
+    width: 60%;
+    box-shadow: $boxShadow;
+    position: relative;
+    border-radius: 5px;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .close-btn {
+      position: absolute;
+      top: 2%;
+      right: 3%;
+      font-size: 3rem;
+      z-index: 1;
+      cursor: pointer;
+      &:hover {
+        color: #f00e0e;
+        transition: 0.2s ease-out;
+      }
+    }
+    .signup-in-modal-content-left {
+      background: linear-gradient(
+        90deg,
+        rgba(247, 74, 70, 1) 0%,
+        rgba(236, 43, 0, 1) 100%
+      );
+      border-radius: 0 5px 5px 0;
+      position: relative;
+      img {
+        width: 50%;
+        height: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .signup-in-modal-content-right {
+      border-radius: 0 5px 5px 0;
+      position: relative;
+      .signup-in-modal-form {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        h1 {
+          font-size: 1rem;
+          text-align: start;
+          width: 80%;
+          margin-bottom: 1rem;
+        }
+        .form-validation {
+          margin-bottom: 0.5rem;
+          width: 80%;
+          &.error {
+            margin-bottom: 1.5rem;
+            position: relative;
+            border: 1px solid $errorColor;
+            border-radius: 2px;
+            p {
+              display: block;
+            }
+          }
+          &.valid {
+            margin-bottom: 0.5rem;
+            position: relative;
+            border: 1px solid $validColor;
+            border-radius: 2px;
+          }
+          p {
+            font-size: 0.7rem;
+            margin-top: 0.5rem;
+            color: $errorColor;
+            display: none;
+            position: absolute;
+            top: 1.8rem;
+          }
+          .modal-input {
+            display: block;
+            padding-left: 0.5rem;
+            outline: none;
+            border-radius: 2px;
+            border: none;
+            height: 2rem;
+            width: 100%;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+            &::placeholder {
+              color: $placeholderText;
+            }
+          }
+        }
+        .modal-input-btn {
+          width: 80%;
+          height: 2rem;
+          border-radius: 4px;
+          background-color: #f9423d;
+          outline: none;
+          border: none;
+          color: white;
+          font-size: 1rem;
+          transition: all 0.4s ease-out;
+          &:hover {
+            background-color: #337af1;
+          }
+        }
+        .modal-input-login {
+          font-size: 0.8rem;
+          margin-top: 1rem;
+          width: 80%;
+          color: #b1b1b1;
+          text-align: center;
+          a {
+            text-decoration: none;
+            color: #f9423d;
+            font-size: 600;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .signup-in-modal-content-left {
+    display: none;
+  }
+  .signup-in-modal-content {
+    grid-template-columns: 1fr;
+    margin: 15% auto;
+    width: 70%;
+    height: 75%;
+  }
+}
+@media screen and (max-width: 580px) {
+  .signup-in-modal-content {
+    margin: 20% auto;
+    width: 90%;
+    height: 80%;
+  }
+}
