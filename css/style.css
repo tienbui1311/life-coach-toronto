@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
 @import url("./scss/main.css");
 * {
@@ -12,43 +11,7 @@ body {
   color: #1f2421;
   background-color: #fcf7ee;
 }
-/* ======= BREAK POINTS:
 
-Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devices (landscape phones, 576px and up) 
-
-==========*/
-/* Header */
-.navbar {
-  display: none;
-}
-.HH-header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: calc(100% - 50px);
-  margin: 20px auto;
-}
-.logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.logo {
-  width: 60px;
-  height: 60px;
-}
-.tagline {
-  font-family: "Allura", cursive;
-  font-size: 24px;
-}
-.hamburger-icon-container {
-  display: block;
-  cursor: pointer;
-}
-.dropdowns {
-  position: relative;
-  display: none;
-}
 /* Landing Page/Introduction section */
 .introduction {
   height: 400px;
@@ -198,11 +161,6 @@ Medium (md) devices (tablets, 768px and up)
 
 ======*/
 @media (min-width: 768px) {
-  /* Header */
-  .logo {
-    width: 80px;
-    height: 80px;
-  }
   /* Introduction */
   .intro-content {
     width: 500px;
@@ -217,66 +175,6 @@ Large (lg) devices (desktops, 992px and up)
 
 ==========*/
 @media (min-width: 992px) {
-  /* Header */
-  .HH-header-container {
-    display: block;
-    text-align: center;
-    /* margin: 20px auto; */
-  }
-  .logo-container {
-    flex-direction: column;
-  }
-  .logo {
-    width: 100px;
-    height: 100px;
-  }
-  .hamburger-icon-container {
-    display: none;
-  }
-  .tagline {
-    font-size: 36px;
-    width: 50%;
-    text-align: center;
-  }
-  .tagline::before,
-  .tagline::after {
-    background-color: #cc6d58;
-    content: "";
-    display: inline-block;
-    height: 1px;
-    bottom: 0.1em;
-    position: relative;
-    vertical-align: baseline;
-    width: 20%;
-    margin: 0 15px;
-  }
-  .dropdowns {
-    display: block;
-  }
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-top: 30px;
-    padding-left: 40px;
-  }
-  .navbar-left a,
-  .navbar-right a {
-    padding-right: 40px;
-    font-size: 1.2em;
-    font-weight: 500;
-    color: #cc6d58;
-    transition: 0.5s ease-in-out;
-  }
-  .navbar-left a:hover,
-  .navbar-right a:hover {
-    color: #bc4b51;
-    font-weight: 700;
-  }
-  .logo-container a,
-  .navbar a {
-    text-decoration: none;
-  }
   /* Service section */
   .services-container {
     grid-template-columns: 1fr 1fr 1fr;
@@ -395,77 +293,3 @@ Large (lg) devices (desktops, 992px and up)
 }
 @media (min-width: 992px) and (min-width: 1200px) {
 }
-
-/* DROPDOWN MENU */
-.hh-dropdown-menu {
-  background-color: #fff;
-  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); /* creates a border */
-  border-radius: 8px;
-  display: none;
-  padding: 15px;
-  position: absolute; /* pops element up in the dom */
-  top: 10px; /* just visually aligned this */
-  width: 250px;
-  z-index: 5;
-  animation: dropdown 0.7s; /* add 'forwards' to prevent the dropdown box to jump back up IF the second translateY position IS NOT at 0% */
-  will-change: transform;
-}
-@keyframes dropdown {
-  from {
-    transform: translateY(-3%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-}
-.hh-dropdown-menu::after {
-  position: absolute;
-  top: -10px;
-  left: 5%;
-  width: 0;
-  height: 0;
-  content: "";
-  border-bottom: 15px solid #fff;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-}
-.hh-dropdown-menu#coaching {
-  left: 41px;
-}
-
-.hh-dropdown-menu#services {
-  left: 166px;
-  /* min-width: 400px;  */
-}
-.hh-dropdown-menu#contact {
-  left: 380px;
-  /* min-width: 400px; */
-}
-.dropdown-item-list {
-  margin: 0;
-  padding-left: 0;
-}
-.dropdown-item-list li {
-  list-style: none;
-}
-.dropdown-item-list li a,
-.dropdown-item-list li a:visited,
-.dropdown-item-list li a:focus {
-  color: #454545;
-  display: block;
-  padding: 10px; /* just a little padding on the top and bottom */
-  text-decoration: none;
-}
-
-.dropdown-item-list li a:hover {
-  background-color: rgba(244, 226, 133, 0.4);
-  color: #5b8e7d;
-}
-.show {
-  display: block;
-  text-align: left;
-}
-
-/*# sourceMappingURL=main.css.map */

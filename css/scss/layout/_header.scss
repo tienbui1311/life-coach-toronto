@@ -1,0 +1,109 @@
+/* ======= BREAK POINTS:
+
+Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devices (landscape phones, 576px and up) 
+
+==========*/
+/* Header */
+.navbar {
+  display: none;
+}
+.HH-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: calc(100% - 50px);
+  margin: 20px auto;
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  .tagline {
+    font-family: "Allura", cursive;
+    font-size: 24px;
+  }
+}
+
+.hamburger-icon-container {
+  display: block;
+  cursor: pointer;
+}
+@media (min-width: 768px) {
+  /* Header */
+  .HH-header-container {
+    .logo-container {
+      .logo {
+        width: 80px;
+        height: 80px;
+      }
+    }
+  }
+}
+/*====== BREAK POINTS
+
+Large (lg) devices (desktops, 992px and up) 
+
+==========*/
+@media (min-width: 992px) {
+  .hamburger-icon-container {
+    display: none;
+  }
+  .HH-header-container {
+    display: block;
+    text-align: center;
+    /* margin: 20px auto; */
+    .logo-container {
+      flex-direction: column;
+      .logo {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .tagline {
+    font-size: 36px;
+    width: 50%;
+    text-align: center;
+    &::before,
+    &::after {
+      background-color: #cc6d58;
+      content: "";
+      display: inline-block;
+      height: 1px;
+      bottom: 0.1em;
+      position: relative;
+      vertical-align: baseline;
+      width: 20%;
+      margin: 0 15px;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 30px;
+    padding-left: 40px;
+  }
+  .navbar-left a,
+  .navbar-right a {
+    padding-right: 40px;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #cc6d58;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      color: #bc4b51;
+      font-weight: 700;
+    }
+  }
+  .logo-container a,
+  .navbar a {
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,81 @@
+/* DROPDOWN MENU */
+.dropdowns {
+  position: relative;
+  display: none;
+}
+.hh-dropdown-menu {
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.1); /* creates a border */
+  border-radius: 8px;
+  display: none;
+  padding: 15px;
+  position: absolute; /* pops element up in the dom */
+  top: 10px; /* just visually aligned this */
+  width: 250px;
+  z-index: 5;
+  animation: dropdown 0.7s; /* add 'forwards' to prevent the dropdown box to jump back up IF the second translateY position IS NOT at 0% */
+  will-change: transform;
+  &::after {
+    position: absolute;
+    top: -10px;
+    left: 5%;
+    width: 0;
+    height: 0;
+    content: "";
+    border-bottom: 15px solid #fff;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+  }
+  &#coaching {
+    left: 41px;
+  }
+  &#services {
+    left: 166px;
+    /* min-width: 400px;  */
+  }
+  &#contact {
+    left: 380px;
+    /* min-width: 400px; */
+  }
+  .dropdown-item-list {
+    margin: 0;
+    padding-left: 0;
+    li {
+      list-style: none;
+      a {
+        &,
+        &:visited,
+        &:focus {
+          color: #454545;
+          display: block;
+          padding: 10px; /* just a little padding on the top and bottom */
+          text-decoration: none;
+        }
+        &:hover {
+          background-color: rgba(244, 226, 133, 0.4);
+          color: #5b8e7d;
+        }
+      }
+    }
+  }
+}
+@keyframes dropdown {
+  from {
+    transform: translateY(-3%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.show {
+  display: block;
+  text-align: left;
+}
+@media (min-width: 992px) {
+  .dropdowns {
+    display: block;
+  }
+}
