@@ -184,10 +184,10 @@
 }
 
 @media screen and (max-width: 768px) {
-  .signup-in-modal-content-left {
+  .signup-in .signup-in-modal-content-left {
     display: none;
   }
-  .signup-in-modal-content {
+  .signup-in .signup-in-modal-content {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     margin: 15% auto;
@@ -197,7 +197,7 @@
 }
 
 @media screen and (max-width: 580px) {
-  .signup-in-modal-content {
+  .signup-in .signup-in-modal-content {
     margin: 20% auto;
     width: 90%;
     height: 80%;
@@ -316,24 +316,131 @@ Large (lg) devices (desktops, 992px and up)
     margin-top: 30px;
     padding-left: 40px;
   }
+  .navbar-left {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(0, 1fr))[4];
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
   .navbar-left a,
   .navbar-right a {
     padding-right: 40px;
     font-size: 1.2em;
     font-weight: 500;
     color: #cc6d58;
-    -webkit-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
   }
   .navbar-left a:hover,
   .navbar-right a:hover {
     color: #bc4b51;
-    font-weight: 700;
+    font-weight: 900;
   }
   .logo-container a,
   .navbar a {
     text-decoration: none;
+    width: 125px;
   }
+}
+
+/* Side menu */
+.side-menu-design {
+  background-color: rgba(244, 225, 134, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+
+.side-menu-design .side-menu-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.side-menu-design .side-menu-header .logo {
+  width: 60px;
+  height: 60px;
+}
+
+.side-menu-design .side-menu-header .side-menu-close-button {
+  width: 30px;
+  cursor: pointer;
+}
+
+.side-menu-position {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  /* inset: 0px; Should I use inset here instead of top, right, bottom, left? */
+  width: 100%;
+  /* the height doesnt cover the whole page vw, wh or percentage? */
+  height: 100%;
+  z-index: 6;
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  /* there are no transition fading out */
+}
+
+.side-menu-content {
+  opacity: 0;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+  -webkit-transition: all 500ms ease-in-out 0.5s;
+  transition: all 500ms ease-in-out 0.5s;
+}
+
+.side-menu-content a {
+  text-decoration: none;
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #1f2421;
+  padding: 20px 0;
+}
+
+.side-menu-content hr {
+  border: 1px solid #f4a259;
+}
+
+.side-menu-content .mobileNav-top {
+  padding-left: 60px;
+}
+
+.side-menu-content .mobileNav-top .HH-button.sign-up {
+  color: #fcf7ee;
+  padding: 10px 10px 7px 10px;
+  border-radius: 40px;
+  max-width: 300px;
+}
+
+.side-menu-content .mobileNav-top a:hover {
+  color: #5b8e7d;
+}
+
+.side-menu-content .mobileNav-bottom {
+  padding: 10px 20px;
+}
+
+.side-menu-content .mobileNav-bottom .personal-account:hover {
+  color: #5b8e7d;
+}
+
+.show-menu {
+  opacity: 1;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  -webkit-transition: opacity 500ms ease-in-out 0s;
+  transition: opacity 500ms ease-in-out 0s;
 }
 
 /* DROPDOWN MENU */
@@ -379,12 +486,12 @@ Large (lg) devices (desktops, 992px and up)
 }
 
 .hh-dropdown-menu#services {
-  left: 166px;
+  left: 184px;
   /* min-width: 400px;  */
 }
 
 .hh-dropdown-menu#contact {
-  left: 380px;
+  left: 472px;
   /* min-width: 400px; */
 }
 

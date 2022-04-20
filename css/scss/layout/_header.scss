@@ -90,20 +90,26 @@ Large (lg) devices (desktops, 992px and up)
     margin-top: 30px;
     padding-left: 40px;
   }
+  .navbar-left {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+  }
   .navbar-left a,
   .navbar-right a {
     padding-right: 40px;
     font-size: 1.2em;
     font-weight: 500;
     color: #cc6d58;
-    transition: 0.5s ease-in-out;
+    transition: 0.3s ease-in-out;
     &:hover {
       color: #bc4b51;
-      font-weight: 700;
+      font-weight: 900;
     }
   }
   .logo-container a,
   .navbar a {
     text-decoration: none;
+    width: 125px;
   }
 }

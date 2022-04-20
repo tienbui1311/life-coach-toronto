@@ -61,7 +61,10 @@ document
 // HH email signup Modal
 // Using Bootstrap css, js and jQuery to open modal on Page Load
 $(document).ready(function () {
-  $("#email-signup").modal("show");
+  // after 3 mins at the site, join email list modal pops up
+  setTimeout(() => {
+    $("#email-signup").modal("show");
+  }, 30000);
 });
 
 // Sign up Modal

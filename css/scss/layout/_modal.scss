@@ -143,20 +143,24 @@ $placeholderText: #b1b1b1;
   }
 }
 @media screen and (max-width: 768px) {
-  .signup-in-modal-content-left {
-    display: none;
-  }
-  .signup-in-modal-content {
-    grid-template-columns: 1fr;
-    margin: 15% auto;
-    width: 70%;
-    height: 75%;
+  .signup-in {
+    .signup-in-modal-content-left {
+      display: none;
+    }
+    .signup-in-modal-content {
+      grid-template-columns: 1fr;
+      margin: 15% auto;
+      width: 70%;
+      height: 75%;
+    }
   }
 }
 @media screen and (max-width: 580px) {
-  .signup-in-modal-content {
-    margin: 20% auto;
-    width: 90%;
-    height: 80%;
+  .signup-in {
+    .signup-in-modal-content {
+      margin: 20% auto;
+      width: 90%;
+      height: 80%;
+    }
   }
 }
