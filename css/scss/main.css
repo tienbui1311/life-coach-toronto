@@ -980,6 +980,10 @@ Large (lg) devices (desktops, 992px and up)
   transition: opacity 500ms ease-in-out 0s;
 }
 
+.overflow {
+  overflow: hidden;
+}
+
 /* DROPDOWN MENU */
 .dropdowns {
   position: relative;

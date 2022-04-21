@@ -58,6 +58,12 @@ document
 document
   .getElementById("menu-close")
   .addEventListener("click", sideMenuDisappears);
+document.getElementById("menu-close").addEventListener("click", () => {
+  document.querySelector("body").classList.remove("overflow");
+});
+document.getElementById("menu-trigger").addEventListener("click", () => {
+  document.querySelector("body").classList.toggle("overflow");
+});
 
 // HH email signup Modal
 // Using Bootstrap css, js and jQuery to open modal on Page Load
