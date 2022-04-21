@@ -18,7 +18,7 @@ $placeholderText: #b1b1b1;
   .signup-in-modal-content {
     background-color: #f4f4f4;
     margin: 10% auto;
-    width: 60%;
+    width: 70%;
     box-shadow: $boxShadow;
     position: relative;
     border-radius: 5px;
@@ -75,10 +75,10 @@ $placeholderText: #b1b1b1;
           margin-bottom: 1rem;
         }
         .form-validation {
-          margin-bottom: 0.5rem;
+          margin-bottom: 0.7rem;
           width: 80%;
           &.error {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.7rem;
             position: relative;
             border: 1px solid $errorColor;
             border-radius: 2px;
@@ -93,8 +93,8 @@ $placeholderText: #b1b1b1;
             border-radius: 2px;
           }
           p {
-            font-size: 0.7rem;
-            margin-top: 0.5rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
             color: $errorColor;
             display: none;
             position: absolute;
@@ -106,7 +106,7 @@ $placeholderText: #b1b1b1;
             outline: none;
             border-radius: 2px;
             border: none;
-            height: 2rem;
+            height: 2.7rem;
             width: 100%;
             box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
             &::placeholder {
@@ -116,14 +116,16 @@ $placeholderText: #b1b1b1;
         }
         .modal-input-btn {
           width: 80%;
-          height: 2rem;
+          height: 2.5rem;
+          padding: 7px;
           border-radius: 10px;
           background-color: c.$yellow;
           outline: none;
           border: none;
+          font-weight: 700;
           color: c.$maintext;
           font-size: 1rem;
-          transition: all 0.4s ease-out;
+          transition: all 0.2s ease-out;
           box-shadow: 2px 2px 0.4rem rgba(0, 0, 0, 0.2);
           &:hover {
             background-color: c.$btnhover;
@@ -166,6 +168,16 @@ $placeholderText: #b1b1b1;
       margin: 20% auto;
       width: 90%;
       height: 80%;
+      .signup-in-modal-content-right {
+        .signup-in-modal-form {
+          .form-validation {
+            p {
+              font-size: 0.8rem;
+              margin-top: 0.8rem;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -244,19 +256,26 @@ $placeholderText: #b1b1b1;
   margin: 10px 0;
 }
 .your-email .button {
-  background-color: c.$yellow;
-  color: c.$maintext;
-  padding: 5px 20px;
-  border-color: c.$btnhover;
+  padding: 3px 20px;
   font-weight: 700;
-  font-size: 18px;
+  height: 50px; /* to match the height of email input*/
   border-radius: 4px;
+  background-color: c.$yellow;
+  outline: none;
+  border: none;
+  color: c.$maintext;
+  font-size: 18px;
+  transition: all 0.4s ease-out;
+  box-shadow: 2px 2px 0.4rem rgba(0, 0, 0, 0.2);
+  &:hover,
+  &:active {
+    background-color: c.$btnhover;
+    color: c.$texthover;
+    box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
 }
-.your-email .button:hover,
-.button:active {
-  background-color: c.$btnhover;
-  cursor: pointer;
-}
+
 .your-email input[type="email"] {
   padding: 6px;
   border: 1px solid #aaa;

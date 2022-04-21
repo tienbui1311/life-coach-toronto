@@ -59,7 +59,7 @@ document
   .getElementById("menu-close")
   .addEventListener("click", sideMenuDisappears);
 
-  // HH email signup Modal
+// HH email signup Modal
 // Using Bootstrap css, js and jQuery to open modal on Page Load
 $(document).ready(function () {
   // after 3 mins at the site, join email list modal pops up
