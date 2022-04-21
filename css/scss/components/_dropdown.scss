@@ -1,3 +1,4 @@
+@use "../abstracts/colors" as c;
 /* DROPDOWN MENU */
 .dropdowns {
   position: relative;
@@ -46,14 +47,14 @@
         &,
         &:visited,
         &:focus {
-          color: #454545;
+          color: c.$maintext;
           display: block;
           padding: 10px; /* just a little padding on the top and bottom */
           text-decoration: none;
         }
         &:hover {
-          background-color: rgba(244, 226, 133, 0.4);
-          color: #5b8e7d;
+          background-color: rgba(c.$yellow, 0.4);
+          color: c.$dark-green;
         }
       }
     }

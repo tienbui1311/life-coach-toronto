@@ -1,5 +1,6 @@
-$errorColor: #f00e0e;
-$validColor: #0add0a;
+@use "../abstracts/colors" as c;
+$errorColor: #c6553c;
+$validColor: #12b012;
 $boxShadow: 0 0 30px 0 rgb(81, 81, 81);
 $placeholderText: #b1b1b1;
 
@@ -32,7 +33,7 @@ $placeholderText: #b1b1b1;
       z-index: 1;
       cursor: pointer;
       &:hover {
-        color: #f00e0e;
+        color: c.$dark-green;
         transition: 0.2s ease-out;
       }
     }
@@ -116,15 +117,18 @@ $placeholderText: #b1b1b1;
         .modal-input-btn {
           width: 80%;
           height: 2rem;
-          border-radius: 4px;
-          background-color: #f9423d;
+          border-radius: 10px;
+          background-color: c.$yellow;
           outline: none;
           border: none;
-          color: white;
+          color: c.$maintext;
           font-size: 1rem;
           transition: all 0.4s ease-out;
+          box-shadow: 2px 2px 0.4rem rgba(0, 0, 0, 0.2);
           &:hover {
-            background-color: #337af1;
+            background-color: c.$btnhover;
+            color: c.$texthover;
+            box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
           }
         }
         .modal-input-login {
@@ -135,7 +139,7 @@ $placeholderText: #b1b1b1;
           text-align: center;
           a {
             text-decoration: none;
-            color: #f9423d;
+            color: c.$dark-green;
             font-size: 600;
           }
         }
@@ -184,9 +188,9 @@ $placeholderText: #b1b1b1;
   /* position: absolute; */
   padding: 18px;
   border-radius: 4px;
-  border: 6px solid #f4a259;
+  border: 6px solid c.$btnhover;
   box-shadow: 0 0 30px 0 rgb(81, 81, 81);
-  background-color: #fff;
+  background-color: c.$mainbg;
   z-index: 3;
   /* width: 60%; */
   height: auto;
@@ -240,17 +244,17 @@ $placeholderText: #b1b1b1;
   margin: 10px 0;
 }
 .your-email .button {
-  background-color: #cc6d58;
-  color: #fff;
+  background-color: c.$yellow;
+  color: c.$maintext;
   padding: 5px 20px;
-  border-color: #bc4b51;
+  border-color: c.$btnhover;
   font-weight: 700;
   font-size: 18px;
   border-radius: 4px;
 }
 .your-email .button:hover,
 .button:active {
-  background-color: #bc4b51;
+  background-color: c.$btnhover;
   cursor: pointer;
 }
 .your-email input[type="email"] {

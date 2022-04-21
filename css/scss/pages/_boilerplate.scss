@@ -11,11 +11,23 @@ html {
 body {
   font-family: "Vazirmatn", sans-serif;
   font-size: 16px;
-  color: #1f2421;
-  background-color: #fcf7ee;
+  line-height: 1.6rem;
+  color: c.$maintext;
+  background-color: c.$mainbg;
+}
+p {
+  margin: 0;
+}
+h1 {
+  color: c.$dark-green;
 }
 /* Footer */
-
-.copyright {
-  margin: 20px 0 0 0;
+footer {
+  background-color: c.$dark-green;
+  color: c.$mainbg;
+  height: 80px;
+  margin-top: 20px;
+  .copyright {
+    padding: 20px;
+  }
 }

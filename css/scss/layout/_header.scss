@@ -26,6 +26,7 @@ Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devic
   .tagline {
     font-family: "Allura", cursive;
     font-size: 24px;
+    color: c.$dark-green;
   }
 }
 
@@ -70,9 +71,11 @@ Large (lg) devices (desktops, 992px and up)
     font-size: 36px;
     width: 50%;
     text-align: center;
+    margin-top: 20px;
+
     &::before,
     &::after {
-      background-color: #cc6d58;
+      background-color: c.$dark-green;
       content: "";
       display: inline-block;
       height: 1px;
@@ -101,10 +104,10 @@ Large (lg) devices (desktops, 992px and up)
     padding-right: 40px;
     font-size: 1.2em;
     font-weight: 500;
-    color: #cc6d58;
+    color: c.$dark-green;
     transition: 0.3s ease-in-out;
     &:hover {
-      color: #bc4b51;
+      color: c.$btnhover;
       font-weight: 700;
     }
   }

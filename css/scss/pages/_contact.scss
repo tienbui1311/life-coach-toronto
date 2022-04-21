@@ -1,0 +1,92 @@
+@use "../abstracts/colors" as c;
+@use "../layout/modal" as m;
+
+.feedback {
+  background-color: c.$second-bg;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  h3 {
+    color: c.$dark-green;
+  }
+
+  .feedback-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    > div {
+      margin-bottom: 20px;
+    }
+    .optional-info {
+      width: 100%;
+      > div {
+        padding: 5px 0;
+      }
+      .feedback-input {
+        display: block;
+        padding-left: 0.5rem;
+        outline: none;
+        border-radius: 2px;
+        border: none;
+        height: 2rem;
+        width: 90%;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+        &::placeholder {
+          color: m.$placeholderText;
+        }
+      }
+    }
+    .required-info {
+      width: 100%;
+      > div {
+        padding: 5px 0;
+      }
+      .feedback-message {
+        display: block;
+        padding-left: 0.5rem;
+        outline: none;
+        border-radius: 2px;
+        border: none;
+        width: 90%;
+        box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+        &::placeholder {
+          color: m.$placeholderText;
+        }
+      }
+    }
+  }
+  .join-email-list > div {
+    display: flex;
+    align-items: baseline;
+    > input {
+      margin-right: 5px;
+    }
+  }
+  button {
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 10px;
+    background-color: c.$yellow;
+    outline: none;
+    border: none;
+    color: c.$maintext;
+    font-size: 1rem;
+    transition: all 0.4s ease-out;
+    box-shadow: 2px 2px 0.4rem rgba(0, 0, 0, 0.2);
+    &:hover {
+      background-color: c.$btnhover;
+      color: c.$texthover;
+      box-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.2);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .feedback {
+    .feedback-form {
+      .optional-info {
+        width: 60%;
+      }
+    }
+  }
+}

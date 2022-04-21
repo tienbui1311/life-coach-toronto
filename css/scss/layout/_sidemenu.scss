@@ -11,10 +11,14 @@
     .logo {
       width: 60px;
       height: 60px;
+      filter: invert(35%) sepia(6%) saturate(2321%) hue-rotate(44deg)
+        brightness(92%) contrast(82%);
     }
     .side-menu-close-button {
       width: 30px;
       cursor: pointer;
+      filter: invert(35%) sepia(6%) saturate(2321%) hue-rotate(44deg)
+        brightness(92%) contrast(82%);
     }
   }
 }
@@ -40,36 +44,30 @@
   a {
     text-decoration: none;
     display: block;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
     font-weight: 500;
-    color: #1f2421;
+    color: c.$maintext;
     padding: 20px 0;
   }
   hr {
-    border: 1px solid #f4a259;
+    height: 0;
+    border: 2px solid c.$dark-green;
   }
   .mobileNav-top {
     padding-left: 60px;
-    .HH-button {
-      &.sign-up {
-        color: #fcf7ee;
-        padding: 10px 10px 7px 10px;
-        border-radius: 40px;
-        max-width: 300px;
-      }
-    }
     a {
       &:hover {
-        color: #5b8e7d;
+        color: c.$btnhover;
       }
     }
   }
-  .mobileNav-bottom {
-    padding: 10px 20px;
-    .personal-account {
-      &:hover {
-        color: #5b8e7d;
-      }
+}
+.mobileNav-bottom {
+  padding: 10px 20px;
+  .HH-button {
+    &.sign-in {
+      padding: 13px 13px 10px 13px;
+      width: 100%;
     }
   }
 }

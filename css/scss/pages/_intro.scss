@@ -1,10 +1,11 @@
+@use "../abstracts/colors" as c;
 /* Landing Page/Introduction section */
 .introduction {
   height: 400px;
   position: relative;
   background-image: linear-gradient(
-    rgba(252, 247, 238, 0.7),
-    rgba(244, 226, 133, 0.7)
+    rgba(c.$mainbg, 0.7),
+    rgba(c.$second-bg, 0.9)
   );
   .intro-img {
     display: none;
