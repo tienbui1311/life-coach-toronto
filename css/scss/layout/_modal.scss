@@ -27,7 +27,7 @@ $placeholderText: #b1b1b1;
     grid-template-columns: 1fr 1fr;
     .close-btn {
       position: absolute;
-      top: 2%;
+      top: 4%;
       right: 3%;
       font-size: 3rem;
       z-index: 1;
@@ -228,7 +228,7 @@ $placeholderText: #b1b1b1;
   border: none;
   color: c.$maintext;
   font-size: 18px;
-  transition: all 0.3s ease-out;
+  transition: all 0.3s ease-in-out;
   box-shadow: 2px 2px 0.4rem rgba(0, 0, 0, 0.2);
   &:hover,
   &:active {
