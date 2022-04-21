@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@forward "pages";
 @import "layout/modal", "layout/header", "layout/sidemenu";
 
-@import "components/dropdown";
+@import "components/dropdown", "components/buttons";

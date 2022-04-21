@@ -1,3 +1,4 @@
+@use "../abstracts/colors" as c;
 /* ======= BREAK POINTS:
 
 Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devices (landscape phones, 576px and up) 
@@ -104,7 +105,7 @@ Large (lg) devices (desktops, 992px and up)
     transition: 0.3s ease-in-out;
     &:hover {
       color: #bc4b51;
-      font-weight: 900;
+      font-weight: 700;
     }
   }
   .logo-container a,

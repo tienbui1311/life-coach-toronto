@@ -1,6 +1,7 @@
+@use "../abstracts/colors" as c;
 /* Side menu */
 .side-menu-design {
-  background-color: hsla(50deg, 83%, 74%, 0.85);
+  background-color: rgba(c.$mainbg, 0.8);
   backdrop-filter: blur(10px);
   .side-menu-header {
     display: flex;

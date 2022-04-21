@@ -3,6 +3,7 @@ $validColor: #0add0a;
 $boxShadow: 0 0 30px 0 rgb(81, 81, 81);
 $placeholderText: #b1b1b1;
 
+/* SIGN UP/ SIGN IN FORM  */
 .signup-in {
   position: fixed;
   z-index: 1;
@@ -162,5 +163,134 @@ $placeholderText: #b1b1b1;
       width: 90%;
       height: 80%;
     }
+  }
+}
+/* JOIN EMAIL-LIST */
+
+/* .modal-window {
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 0;
+} */
+
+.HH-overlay {
+  /* position: absolute; */
+  padding: 18px;
+  border-radius: 4px;
+  border: 6px solid #f4a259;
+  box-shadow: 0 0 30px 0 rgb(81, 81, 81);
+  background-color: #fff;
+  z-index: 3;
+  /* width: 60%; */
+  height: auto;
+  min-width: 0;
+}
+.modal-position {
+  position: relative;
+  bottom: 0px;
+  right: 0px;
+}
+.close-reveal-modal {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  cursor: pointer;
+  right: -15px;
+  top: -15px;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+  background-color: #3b4144;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  line-height: 32px;
+  border: 2px solid #fff;
+  box-shadow: 0px 0px 15px 1px rgba(2, 2, 2, 0.75);
+}
+.HH-sign-up-content h4 {
+  color: #000;
+  font-size: 30px;
+  padding-bottom: 10px;
+}
+.HH-sign-up-content {
+  font-size: 16px;
+  display: block;
+  line-height: 36px;
+  box-sizing: border-box;
+}
+.email-additional a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #cc6d58;
+  margin-right: 10px;
+}
+.your-email {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+.your-email .button {
+  background-color: #cc6d58;
+  color: #fff;
+  padding: 5px 20px;
+  border-color: #bc4b51;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: 4px;
+}
+.your-email .button:hover,
+.button:active {
+  background-color: #bc4b51;
+  cursor: pointer;
+}
+.your-email input[type="email"] {
+  padding: 6px;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  width: 100%;
+}
+.info-text {
+  font-size: 18px;
+  font-weight: 700;
+}
+.newsletter-signup {
+  padding: 30px 10px;
+  display: block;
+}
+/* ====== BREAK POINTS
+
+Medium (md) devices (tablets, 768px and up) 
+
+======*/
+@media (min-width: 768px) {
+  .HH-overlay {
+    width: 70%;
+  }
+}
+/*====== BREAK POINTS
+
+Large (lg) devices (desktops, 992px and up) 
+
+==========*/
+
+@media (min-width: 992px) {
+  .newsletter-signup {
+    padding: 30px 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .HH-overlay {
+    width: 80%;
   }
 }
