@@ -64,8 +64,8 @@ document
 $(document).ready(function () {
   // after 3 mins at the site, join email list modal pops up
   setTimeout(() => {
-    $("#email-signup").modal("show");
-  }, 30000);
+    $("#email-list").modal("show");
+  }, 5000);
 });
 
 // Sign up Modal

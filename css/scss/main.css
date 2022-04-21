@@ -63,11 +63,12 @@
   transition: 0.2s ease-out;
 }
 .signup-in .signup-in-modal-content .signup-in-modal-content-left {
-  background: linear-gradient(90deg, rgb(247, 74, 70) 0%, rgb(236, 43, 0) 100%);
+  background: linear-gradient(60deg, #faf3d1 0%, rgba(244, 162, 89, 0.5) 100%);
   border-radius: 0 5px 5px 0;
   position: relative;
 }
 .signup-in .signup-in-modal-content .signup-in-modal-content-left img {
+  filter: invert(35%) sepia(6%) saturate(2321%) hue-rotate(44deg) brightness(92%) contrast(82%);
   width: 50%;
   height: 50%;
   position: absolute;
@@ -198,76 +199,34 @@
   }
 }
 /* JOIN EMAIL-LIST */
-/* .modal-window {
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0;
-} */
-.HH-overlay {
-  /* position: absolute; */
+.modal-content {
   padding: 18px;
   border-radius: 4px;
   border: 6px solid #f4a259;
   box-shadow: 0 0 30px 0 rgb(81, 81, 81);
   background-color: #f2f4f8;
-  z-index: 3;
-  /* width: 60%; */
   height: auto;
   min-width: 0;
 }
-
-.modal-position {
-  position: relative;
-  bottom: 0px;
-  right: 0px;
-}
-
-.close-reveal-modal {
+.modal-content .email-list-header {
   display: flex;
-  justify-content: center;
-  position: absolute;
-  cursor: pointer;
-  right: -15px;
-  top: -15px;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  padding: 0;
-  background-color: #3b4144;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 32px;
-  border: 2px solid #fff;
-  box-shadow: 0px 0px 15px 1px rgba(2, 2, 2, 0.75);
+  justify-content: space-between;
+  align-items: baseline;
 }
-
-.HH-sign-up-content h4 {
+.modal-content .email-list-header h4 {
   color: #000;
-  font-size: 30px;
-  padding-bottom: 10px;
+  font-size: 1.5rem;
+  padding: 0 10px;
 }
-
-.HH-sign-up-content {
-  font-size: 16px;
-  display: block;
-  line-height: 36px;
-  box-sizing: border-box;
+.modal-content .email-list-header .btn-close {
+  color: #51603e;
 }
 
 .email-additional a {
   text-decoration: none;
   font-size: 16px;
   color: #cc6d58;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .your-email {
@@ -279,7 +238,7 @@
 .your-email .button {
   padding: 3px 20px;
   font-weight: 700;
-  height: 50px;
+  height: 40px;
   /* to match the height of email input*/
   border-radius: 4px;
   background-color: #f4e285;
@@ -287,7 +246,7 @@
   border: none;
   color: #1f2421;
   font-size: 18px;
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
   box-shadow: 2px 2px 0.4rem rgba(0, 0, 0, 0.2);
 }
 .your-email .button:hover, .your-email .button:active {
@@ -309,38 +268,6 @@
   font-weight: 700;
 }
 
-.newsletter-signup {
-  padding: 30px 10px;
-  display: block;
-}
-
-/* ====== BREAK POINTS
-
-Medium (md) devices (tablets, 768px and up) 
-
-======*/
-@media (min-width: 768px) {
-  .HH-overlay {
-    width: 70%;
-  }
-}
-/*====== BREAK POINTS
-
-Large (lg) devices (desktops, 992px and up) 
-
-==========*/
-@media (min-width: 992px) {
-  .newsletter-signup {
-    padding: 30px 10px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  .HH-overlay {
-    width: 80%;
-  }
-}
 .feedback-location-container {
   margin-top: 30px auto;
 }
@@ -348,7 +275,7 @@ Large (lg) devices (desktops, 992px and up)
   color: #f2f4f8;
   font-weight: 700;
   height: 5rem;
-  background-image: linear-gradient(rgba(250, 243, 209, 0.5), rgba(0, 0, 0, 0.7)), url("img/IMG_9730.jpg");
+  background-image: linear-gradient(rgba(250, 243, 209, 0.5), rgba(0, 0, 0, 0.7)), url("/img/IMG_9730.jpg");
   background-size: cover;
   background-position: bottom center;
   display: flex;
@@ -652,11 +579,12 @@ Large (lg) devices (desktops, 992px and up)
   transition: 0.2s ease-out;
 }
 .signup-in .signup-in-modal-content .signup-in-modal-content-left {
-  background: linear-gradient(90deg, rgb(247, 74, 70) 0%, rgb(236, 43, 0) 100%);
+  background: linear-gradient(60deg, #faf3d1 0%, rgba(244, 162, 89, 0.5) 100%);
   border-radius: 0 5px 5px 0;
   position: relative;
 }
 .signup-in .signup-in-modal-content .signup-in-modal-content-left img {
+  filter: invert(35%) sepia(6%) saturate(2321%) hue-rotate(44deg) brightness(92%) contrast(82%);
   width: 50%;
   height: 50%;
   position: absolute;
@@ -787,76 +715,34 @@ Large (lg) devices (desktops, 992px and up)
   }
 }
 /* JOIN EMAIL-LIST */
-/* .modal-window {
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.7);
-  display: flex;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: 0;
-} */
-.HH-overlay {
-  /* position: absolute; */
+.modal-content {
   padding: 18px;
   border-radius: 4px;
   border: 6px solid #f4a259;
   box-shadow: 0 0 30px 0 rgb(81, 81, 81);
   background-color: #f2f4f8;
-  z-index: 3;
-  /* width: 60%; */
   height: auto;
   min-width: 0;
 }
-
-.modal-position {
-  position: relative;
-  bottom: 0px;
-  right: 0px;
-}
-
-.close-reveal-modal {
+.modal-content .email-list-header {
   display: flex;
-  justify-content: center;
-  position: absolute;
-  cursor: pointer;
-  right: -15px;
-  top: -15px;
-  border-radius: 50%;
-  height: 30px;
-  width: 30px;
-  padding: 0;
-  background-color: #3b4144;
-  color: #fff;
-  font-size: 18px;
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 32px;
-  border: 2px solid #fff;
-  box-shadow: 0px 0px 15px 1px rgba(2, 2, 2, 0.75);
+  justify-content: space-between;
+  align-items: baseline;
 }
-
-.HH-sign-up-content h4 {
+.modal-content .email-list-header h4 {
   color: #000;
-  font-size: 30px;
-  padding-bottom: 10px;
+  font-size: 1.5rem;
+  padding: 0 10px;
 }
-
-.HH-sign-up-content {
-  font-size: 16px;
-  display: block;
-  line-height: 36px;
-  box-sizing: border-box;
+.modal-content .email-list-header .btn-close {
+  color: #51603e;
 }
 
 .email-additional a {
   text-decoration: none;
   font-size: 16px;
   color: #cc6d58;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
 .your-email {
@@ -868,7 +754,7 @@ Large (lg) devices (desktops, 992px and up)
 .your-email .button {
   padding: 3px 20px;
   font-weight: 700;
-  height: 50px;
+  height: 40px;
   /* to match the height of email input*/
   border-radius: 4px;
   background-color: #f4e285;
@@ -876,7 +762,7 @@ Large (lg) devices (desktops, 992px and up)
   border: none;
   color: #1f2421;
   font-size: 18px;
-  transition: all 0.4s ease-out;
+  transition: all 0.3s ease-out;
   box-shadow: 2px 2px 0.4rem rgba(0, 0, 0, 0.2);
 }
 .your-email .button:hover, .your-email .button:active {
@@ -898,38 +784,6 @@ Large (lg) devices (desktops, 992px and up)
   font-weight: 700;
 }
 
-.newsletter-signup {
-  padding: 30px 10px;
-  display: block;
-}
-
-/* ====== BREAK POINTS
-
-Medium (md) devices (tablets, 768px and up) 
-
-======*/
-@media (min-width: 768px) {
-  .HH-overlay {
-    width: 70%;
-  }
-}
-/*====== BREAK POINTS
-
-Large (lg) devices (desktops, 992px and up) 
-
-==========*/
-@media (min-width: 992px) {
-  .newsletter-signup {
-    padding: 30px 10px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
-  .HH-overlay {
-    width: 80%;
-  }
-}
 /* ======= BREAK POINTS:
 
 Extra small (xs) devices (portrait phones, less than 576px) and Small (sm) devices (landscape phones, 576px and up) 

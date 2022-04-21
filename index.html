@@ -130,7 +130,7 @@
       </section>
       <!-- ABOUT SECTION -->
       <section class="about-container">
-        <img src="img/IMG_9730.jpg" alt="Jessica photo"/>
+        <img src="img/IMG_9730.jpg" alt="Jessica photo" />
         <div class="about-content">
           <div class="about-quick-intro">
             <h1>Hi, I'm Jessica Pham</h1>
@@ -385,18 +385,32 @@
       </div>
     </div>
     <!-- HH join email list Modal HTML -->
-    <aside id="email-signup" class="modal-window modal fade">
-      <div class="HH-overlay modal-position modal-dialog">
-        <div class="HH-sign-up-content">
-          <h4>Sign Up to Receive Expert Advice From Our Therapists</h4>
-          <div>
+    <div
+      class="modal fade"
+      id="email-list"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="email-list-header">
+            <h4>Sign Up to Receive Expert Advice From Our Therapists</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
             <form action="" method="" class="">
               <div class="info-input">
                 <div class="your-email">
                   <input
                     type="email"
                     name="your-email"
-                    value
+                    value=""
                     size="40"
                     placeholder="Your Email"
                   />
@@ -414,16 +428,8 @@
             </form>
           </div>
         </div>
-        <button
-          type="button"
-          class="close-reveal-modal"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        >
-          x
-        </button>
       </div>
-    </aside>
+    </div>
     <footer>
       <p class="copyright">HealthyandHappy.ca 2022. All Right Reserved.</p>
     </footer>
